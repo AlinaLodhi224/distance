@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function kilometersToMeters(km) {
+    return km * 1000;
+}
+
+function kilometersToFeet(km) {
+    return km * 3280.84;
+}
+
+function kilometersToInches(km) {
+    return km * 39370.1;
+}
+
+function kilometersToCentimeters(km) {
+    return km * 100000;
+}
+
+function convertDistance() {
+    const km = parseFloat(prompt("Enter the distance in kilometers:"));
+    
+    if (isNaN(km) || km < 0) {
+        document.write("Please enter a valid distance.");
+        return;
+    }
+
+    document.write(`${km} kilometers is:`);
+    document.write(`${kilometersToMeters(km)} meters`);
+    document.write(`${kilometersToFeet(km)} feet`);
+    document.write(`${kilometersToInches(km)} inches`);
+    document.write(`${kilometersToCentimeters(km)} centimeters`);
+}
+
+convertDistance();
+    
+    </script>
+</body>
+</html>
